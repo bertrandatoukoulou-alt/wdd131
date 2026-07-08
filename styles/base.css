@@ -35,35 +35,69 @@ h1 {
     font-family: new times roman;
 }
 
-.card {
+header nav a {
+    text-decoration: none;
+    color: rgb(234, 236, 242);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* ====== Contenu principal ====== */
+.cards-container {
     display: flex;
-    background-color: #f9f9f9;
+    /* deux colonnes */
+    gap: 20px;
+    padding: 5px;
+}
+
+.card {
+    flex: 1;
+    /* chaque carte prend la même largeur */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    width: 65%;
 }
 
 .card h2 {
-    font-size: 1.5rem;
-    color: rgb(19, 19, 74);
-    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    color: rgb(195, 201, 222);
+    background-color: rgb(17, 17, 64);
+    padding: 0.7rem;
 }
 
 .card img {
-    display: grid;
-    grid-template-columns: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+.card ul li {
+    margin: 8px 0;
+}
 
+.card ul li a {
+    color: rgb(48, 45, 45);
+    text-decoration: none;
+    text-align: center;
+}
 
+.card ul li a:hover {
+    text-decoration: underline;
+    text-align: center;
+}
 
 footer {
     background-color: rgb(17, 17, 64);
-    margin: 10px;
+    margin: 5px;
     padding: 1.5rem;
     text-align: center;
 }
