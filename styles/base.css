@@ -15,31 +15,48 @@ header span {
 
 header nav {
     display: flex;
-    Justify-content: center;
+    Justify-content: space-around;
     background-color: rgb(48, 45, 45);
     padding: 10px;
-    width: 98.5%;
-    gap: 200px;
+    width: auto;
+    
 }
 
-header nav a {
-    display: flex;
-    text-decoration: none;
-    color: rgb(234, 236, 242);
-    font-size: 1.5rem;
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
     color:rgb(17, 17, 64);
-    font-family: new times roman;
+    font-weight: 100;
 }
 
-header nav a {
+nav a {
+    display: flex;
     text-decoration: none;
-    color: rgb(234, 236, 242);
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    color: rgb(193, 206, 241);
+    font-size: 1.5rem;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(17, 17, 64);
+    border-radius: 8px;
+    width: 100%;
+}
+.active {
+    color:#ef408c;
+}
+
+nav a:hover {
+    color: rgb(195, 201, 222);
+    border: 2px solid #6aaede;
 }
 
 /* ====== Contenu principal ====== */
@@ -48,6 +65,7 @@ header nav a {
     /* deux colonnes */
     gap: 20px;
     padding: 5px;
+    width: 100%;
 }
 
 .card {
@@ -60,19 +78,29 @@ header nav a {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
-    text-align: center;
-    margin-top: 0;
-    color: rgb(195, 201, 222);
-    background-color: rgb(17, 17, 64);
-    padding: 0.7rem;
+.card div {
+    margin: 10px;
+    padding: 20px;
+}
+
+.card div img {
+    float: right;
+}
+
+.card div p {
+    width: 100%;
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
-    margin: 5px 0;
-    border-radius: 5px;
+    float: right;
+}
+
+.card h2 {
+    text-align: center;
+    margin: 0;
+    color: rgb(195, 201, 222);
+    background-color: rgb(17, 17, 64);
+    padding: 0.7rem;
 }
 
 .card ul {
