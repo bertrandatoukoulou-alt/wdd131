@@ -11,6 +11,7 @@ body {
 header {
     background-color: rgb(17, 17, 64);
     width: 100%;
+    display: grid;
 }
 
 #course-title {
@@ -41,6 +42,16 @@ header nav a:hover {
     border-bottom: 2px solid #6aaede;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(17, 17, 64);
+    border-radius: 8px;
+    width: 100%;
+}
+
 /* ====== Main ====== */
 .cards-container {
     display: flex;
@@ -48,7 +59,6 @@ header nav a:hover {
     padding: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    width: 70%, 30%;
 }
 
 .card {
