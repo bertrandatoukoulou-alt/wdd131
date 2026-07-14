@@ -1,0 +1,137 @@
+body {
+    background-color: whitesmoke;
+    font-size: 16px;
+    margin: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ====== Header ====== */
+header {
+    background-color: rgb(133, 112, 112);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ====== Navigation ====== */
+.navigation {
+    display: none;
+    /* cachée par défaut sur mobile */
+}
+
+.navigation.open {
+    display: block;
+    /* affichée quand on clique sur le menu */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    /* liens empilés sur mobile */
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    font-size: large;
+    padding: 0.5rem;
+    background-color: rgb(33, 26, 26);
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #180267;
+}
+
+.navigation {
+    display: none;
+    /* caché par défaut */
+}
+
+.navigation.open {
+    display: block;
+    /* affiché quand on clique */
+}
+
+/* ====== Album grid ====== */
+main {
+    display: block;
+    grid-template-columns: 1fr;
+    /* une colonne par défaut (mobile) */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+figure {
+    text-align: center;
+    margin: 20px auto;
+}
+
+figure img {
+    width: 100%;
+    /* occupe toute la largeur */
+    height: 250px;
+    /* hauteur fixe */
+    object-fit: cover;
+    /* recadrage proportionnel */
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #180267;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* ====== Large screens (≥768px) ====== */
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+        /* cache le hamburger */
+    }
+
+    .navigation {
+        display: block;
+        /* affiche la nav normalement */
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* menu horizontal */
+        justify-content: center;
+    }
+
+    nav a {
+        background-color: rgb(8, 12, 12);
+        padding: 10px;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colonnes sur desktop */
+    }
+}
