@@ -48,13 +48,13 @@ nav a {
     text-align: center;
     font-size: large;
     padding: 0.5rem;
-    background-color: rgb(33, 26, 26);
+    background-color: burlywood;
     color: white;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #180267;
+    color: navy;
 }
 
 /* ====== Album grid ====== */
@@ -88,7 +88,7 @@ figure img {
 
 figcaption {
     margin-top: 8px;
-    color: #180267;
+    color: navy;
 }
 
 h1 {
@@ -114,7 +114,7 @@ h1 {
     }
 
     nav a {
-        background-color: rgb(8, 12, 12);
+        background-color: black;
         padding: 10px;
     }
 
