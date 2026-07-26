@@ -108,13 +108,15 @@ picture img {
     gap: 1rem;
 }
 
-/* Default: show SVG, hide emoji */
+/* Default: show SVG, no emoji */
 .weather-icon-mobile {
     display: block;
 }
 
-.emoji {
-    display: none;
+/* Add ::after rule explicitly */
+.weather-card h2::after {
+    content: "";
+    /* empty by default on mobile */
 }
 
 footer {
@@ -167,13 +169,13 @@ footer p {
         margin: -1.8rem -1.8rem 1.2rem -1.8rem;
     }
 
-    /* On desktop: hide SVG, show emoji */
+    /* ✅ On desktop: hide SVG, show emoji via ::after */
     .weather-icon-mobile {
         display: none;
     }
 
-    .emoji {
-        display: inline;
+    .weather-card h2::after {
+        content: " ⛅";
         font-size: 1.5rem;
     }
 }
