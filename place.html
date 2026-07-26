@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Kpalime Cascade, Togo - Country Page</title>
     <link rel="stylesheet" href="week03/styles/place.css">
     <script src="week03/scripts/place.js" defer></script>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,
-        GRAD@20..48,100..700,0..1,-50..200&icon_names=weather_hail" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=weather_hail" />
 </head>
+
 <body>
     <header>
-        <h1>KPALIME CASCADE</h1>
+        <h1>TOGO - KPALIME CASCADE</h1>
     </header>
-    <main>
-        <img src="week03/images/chez-felicia1.jpg" 
-        srcset="week03/images/chez-felicia1.jpg 500w, week03/images/chez-felicia1.jpg 1000w, week03/images/chez-felicia1.jpg 1500w"
-        sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px,1500px"
-        alt="a beautiful cascade Waterfall in kpalime, togo">
+
+    <main class="hero">
+        <picture>
+            <source srcset="week03/images/chez-felicia1.jpeg" type="image/jpeg">
+            <img src="week03/images/chez-felicia1.jpeg"
+                srcset="week03/images/chez-felicia1.jpeg 500w, week03/images/chez-felicia1.jpeg 1000w, week03/images/chez-felicia1.jpeg 1500w"
+                sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 1500px"
+                alt="A beautiful cascade waterfall in Kpalime, Togo" width="1000" height="667">
+        </picture>
+
+        <div class="card-container">
+            <section class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><span>Area:</span> 56,785 sq km</li>
+                    <li><span>Population:</span> 8.8 million</li>
+                    <li><span>Capital:</span> Lomé</li>
+                    <li><span>Languages:</span> French, Ewe, Kabyè</li>
+                    <li><span>Currency:</span> West African CFA franc</li>
+                    <li><span>Time Zone:</span> UTC+0</li>
+                    <li><span>Calling Code:</span> +228</li>
+                    <li><span>Internet TLD:</span> .tg</li>
+                </ul>
+            </section>
+
+            <section class="card weather-card">
+                <h2>Weather <span class="weather-icon"></span></h2>
+                <div class="weather-content">
+                    <div class="weather-icon-mobile">
+                        <span class="material-symbols-outlined">weather_hail</span>
+                    </div>
+                    <ul>
+                        <li><span>Temperature:</span> <span id="temperature">28</span>°C</li>
+                        <li><span>Conditions:</span> Tropical / Humid</li>
+                        <li><span>Wind:</span> <span id="wind">10</span> km/h</li>
+                        <li><span>Wind Chill:</span> <span id="windchill">N/A</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>©<span id="currentyear">2026 | 🏔️KPALIME CASCADE🏔️ | Togo</span></p>
+        <p>&copy;<span id="currentyear"></span> | 🏔️ KPALIME CASCADE, TOGO 🏔️ | All Rights Reserved</p>
         <p>Last Modification: <span id="LastModified"></span></p>
     </footer>
 </body>
+
 </html>

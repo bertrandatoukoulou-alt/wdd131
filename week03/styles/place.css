@@ -1,34 +1,190 @@
+/* place.css - WDD 131 Kpalime Cascade / Togo Styling */
+
+:root {
+    --togo-green: #006a4e;
+    --togo-yellow: #ffce00;
+    --togo-red: #d21034;
+    --light-bg: #f7f9f6;
+    --dark-text: #222222;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
     width: 100%;
+    line-height: 1.6;
 }
 
 header {
-    background-color: green;
-    padding: 10px;
-    margin: 20px;
+    background-color: var(--togo-green);
+    padding: 1rem;
+    text-align: center;
     width: 100%;
-    font-size: xx-large;
+    border-bottom: 5px solid var(--togo-yellow);
 }
 
 h1 {
-    color: yellow;
+    color: var(--togo-yellow);
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
 }
 
-img {
+.hero {
+    position: relative;
     width: 100%;
-    padding: auto;
-    margin: 10px;
-    border-radius: 1rem 1rem;
-    border-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    max-height: 85vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: var(--togo-green);
+    color: var(--white);
+    padding: 0.6rem 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--togo-yellow);
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+.card ul li span {
+    font-weight: bold;
+    color: var(--togo-green);
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-icon-mobile {
+    font-size: 2.8rem;
+    color: var(--togo-green);
 }
 
 footer {
-    background-color: green;
-    padding: 10px;
-    margin: 10px;
-    color: rgb(255, 255, 255);
+    background-color: var(--togo-green);
+    padding: 1.5rem;
+    margin-top: 0;
+    color: var(--white);
     text-align: center;
-    font-size: xx-large;
+    font-size: 1rem;
+    width: 100%;
+    border-top: 5px solid var(--togo-yellow);
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        position: relative;
+    }
+
+    .card-container {
+        position: static;
+    }
+
+    picture img {
+        border-radius: 0;
+        width: 100%;
+        max-height: 85vh;
+        object-fit: cover;
+    }
+
+    .data-card {
+        position: absolute;
+        top: 35px;
+        left: 50px;
+        width: 360px;
+        padding: 1.8rem;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(5px);
+    }
+
+    .weather-card {
+        position: absolute;
+        bottom: 35px;
+        right: 50px;
+        width: 360px;
+        padding: 1.8rem;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(5px);
+    }
+
+    /* Make text inside cards slightly larger on desktop */
+    .card ul li {
+        font-size: 1.05rem;
+        padding: 0.55rem 0;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.2rem;
+        margin: -1.8rem -1.8rem 1.2rem -1.8rem;
+    }
+
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
 }
