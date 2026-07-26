@@ -49,7 +49,6 @@ picture img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     object-fit: cover;
     max-height: 85vh;
@@ -109,9 +108,13 @@ picture img {
     gap: 1rem;
 }
 
+/* Default: show SVG, hide emoji */
 .weather-icon-mobile {
-    font-size: 2.8rem;
-    color: var(--togo-green);
+    display: block;
+}
+
+.emoji {
+    display: none;
 }
 
 footer {
@@ -129,22 +132,8 @@ footer p {
     margin: 0.4rem 0;
 }
 
+/* Desktop view adjustments */
 @media (min-width: 768px) {
-    .hero {
-        position: relative;
-    }
-
-    .card-container {
-        position: static;
-    }
-
-    picture img {
-        border-radius: 0;
-        width: 100%;
-        max-height: 85vh;
-        object-fit: cover;
-    }
-
     .data-card {
         position: absolute;
         top: 35px;
@@ -167,7 +156,6 @@ footer p {
         backdrop-filter: blur(5px);
     }
 
-    /* Make text inside cards slightly larger on desktop */
     .card ul li {
         font-size: 1.05rem;
         padding: 0.55rem 0;
@@ -179,12 +167,13 @@ footer p {
         margin: -1.8rem -1.8rem 1.2rem -1.8rem;
     }
 
-    .weather-card h2::after {
-        content: " ⛅";
-        font-size: 1.5rem;
-    }
-
+    /* On desktop: hide SVG, show emoji */
     .weather-icon-mobile {
         display: none;
+    }
+
+    .emoji {
+        display: inline;
+        font-size: 1.5rem;
     }
 }
