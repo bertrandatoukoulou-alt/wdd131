@@ -2,14 +2,18 @@
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
-hamButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-    hamButton.textContent = navigation.classList.contains("open") ? "✖" : "☰";
-});
+if (hamButton && navigation) {
+    hamButton.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+        hamButton.textContent = navigation.classList.contains("open") ? "✖" : "☰";
+    });
+}
 
 // Footer infos
-document.querySelector("#lastModified").textContent = document.lastModified;
-document.querySelector("#currentyear").textContent = new Date().getFullYear();
+const lastModifiedEl = document.querySelector("#lastModified");
+const currentYearEl = document.querySelector("#currentyear");
+if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
+if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
 
 // Temple data
 const temples = [
@@ -89,6 +93,7 @@ const temples = [
 function createTempleCards() {
     const container = document.querySelector(".res-grid");
     // Make sure you have <div class="res-grid"></div> in your HTML
+    if (!container) return;
 
     temples.forEach(temple => {
         let card = document.createElement("section");
@@ -121,6 +126,3 @@ function createTempleCards() {
 // Call the function
 createTempleCards();
 
-
-// Call the function
-displayTemples(temples);
