@@ -90,12 +90,14 @@ const temples = [
 ];
 
 // Function to generate temple cards dynamically
-function createTempleCards() {
+function displayTemples(templesArray) {
     const container = document.querySelector(".res-grid");
-    // Make sure you have <div class="res-grid"></div> in your HTML
     if (!container) return;
 
-    temples.forEach(temple => {
+    // Clear previous cards
+    container.innerHTML = "";
+
+    templesArray.forEach(temple => {
         let card = document.createElement("section");
 
         let name = document.createElement("h3");
@@ -109,9 +111,9 @@ function createTempleCards() {
         dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
         area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
 
-        img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
+        img.src = temple.imageUrl;
+        img.alt = `${temple.templeName} Temple`;
+        img.loading = "lazy";
 
         card.appendChild(name);
         card.appendChild(location);
@@ -123,6 +125,55 @@ function createTempleCards() {
     });
 }
 
-// Call the function
-createTempleCards();
+// Filtering function
+function filterTemples(criteria) {
+    let filtered;
 
+    switch (criteria) {
+        case "old":
+            filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+            break;
+        case "new":
+            filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+            break;
+        case "large":
+            filtered = temples.filter(t => t.area > 90000);
+            break;
+        case "small":
+            filtered = temples.filter(t => t.area < 10000);
+            break;
+        default: // "home"
+            filtered = temples;
+    }
+
+    displayTemples(filtered);
+}
+
+// Hook up navigation links
+document.querySelector("a[href='old.html']").addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples("old");
+});
+
+document.querySelector("a[href='new.html']").addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples("new");
+});
+
+document.querySelector("a[href='large.html']").addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples("large");
+});
+
+document.querySelector("a[href='small.html']").addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples("small");
+});
+
+document.querySelector("a[href='index.html']").addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples("home");
+});
+
+// Initial load
+displayTemples(temples);
