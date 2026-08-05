@@ -4,34 +4,18 @@ header {
     padding: 10px;
     text-align: center;
 }
+
 h1 {
     text-align: center;
 }
 
 main {
     display: flex;
-    background: #f8b703;
     flex-direction: column;
     margin: 5px auto;
     gap: 1rem;
     padding: 10px;
     width: 400px;
-}
-
-img {
-    width: 100%;
-    background: #f8b703;
-    animation: fade 15s;
-}
-
-@keyframes fade {
-    0%{
-        opacity: 0;
-    }
-    
-    100%{
-        opacity: 1;
-    }
 }
 
 footer {
