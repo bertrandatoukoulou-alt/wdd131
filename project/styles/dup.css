@@ -6,7 +6,7 @@ header {
 }
 
 body {
-    background-color: #717171;
+    background-color: rgb(252, 157, 3);
     font-size: 16px;
     margin: 10px;
     font-family: "Lato", sans-serif;
@@ -27,18 +27,20 @@ div {
 
 main {
     display: grid;
-    padding-left: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 20px;
+    margin: 5px auto;
+    padding: 10px;
+    max-width: 800px;
+    /* wider container */
+}
+
+picture {
+    display: block;
     margin: 0 auto;
-}
+    text-align: center;
 
-h2, h3 {
-    margin-left: 0;
-    color: #09015d;
-}
-
-p {
-    color: #ffffff;
-    font-size: 1.2rem;
 }
 
 footer {
