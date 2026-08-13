@@ -31,7 +31,8 @@ main {
     margin: 0 auto;
 }
 
-h2, h3 {
+h2,
+h3 {
     margin-left: 0;
     color: #09015d;
 }

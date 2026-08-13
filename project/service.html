@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Maintenance - Services</title>
+    <meta name="description" content="Services page for Building Maintenance website.">
+    <meta name="author" content="Koffi Atoukoulou">
+    <link rel="stylesheet" href="styles/dup.css">
+    <script src="script/dup.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <button id="menu">☰</button>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>What We Offer</h2>
+        <ul id="serviceList"></ul>
+
+        <h2>Request a Service</h2>
+        <form id="serviceForm">
+            <label for="service">Select a Service <span class="required">*</span></label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Choose a service...</option>
+                <option value="maintenance">Building Maintenance</option>
+                <option value="repairs">Repairs</option>
+                <option value="improvement">Home Improvement</option>
+                <option value="management">Property Management</option>
+            </select>
+
+            <label for="details">Additional Details</label>
+            <textarea id="details" name="details" rows="4"></textarea>
+
+            <input type="submit" value="Submit Request" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Koffi Atoukoulou – Togo</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
