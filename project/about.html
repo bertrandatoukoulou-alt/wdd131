@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building Maintenance - About</title>
-    <meta name="description" content="About page for Building Maintenance website.">
+    <title>Building Maintenance - About Us</title>
+    <meta name="description" content="Learn more about the mission and values of Building Maintenance.">
     <meta name="author" content="Koffi Atoukoulou">
     <link rel="stylesheet" href="styles/dup.css">
     <script src="script/dup.js" defer></script>
@@ -23,18 +23,81 @@
     </header>
 
     <main>
-        <h2>Site Purpose</h2>
-        <p>Our mission is to support homeowners, property managers, and contractors with reliable maintenance and repair
-            guidance.</p>
+        <!-- Mission -->
+        <section>
+            <h2>Our Mission</h2>
+            <p>
+                We created Building Maintenance to give homeowners quick access to reliable advice, tools, and solutions
+                for caring for their properties.
+                Our mission is to simplify maintenance and empower families to feel confident in managing their homes.
+            </p>
+        </section>
 
-        <h2>Scenarios</h2>
-        <ul>
-            <li>Homeowners: How can I maintain my building?</li>
-            <li>Property managers: How can I manage my properties effectively?</li>
-            <li>Contractors: How can I provide better services?</li>
-        </ul>
+        <!-- Why We Built This Site -->
+        <section>
+            <h2>Why We Built This Site</h2>
+            <p>
+                Owning a home comes with both major responsibilities and small everyday challenges. From preventing
+                costly structural issues to fixing little problems like leaky faucets, squeaky doors, or cracked tiles,
+                we provide step‑by‑step guidance so you can handle it all with ease.
+                Our goal is to make reliable guidance available at your fingertips, helping you save money, protect your
+                investment, and enjoy greater peace of mind.
+            </p>
+        </section>
 
-        <img src="images/about.webp" alt="Team working on building maintenance" loading="lazy">
+        <!-- Scenarios -->
+        <section>
+            <h2>Who We Serve</h2>
+            <ul>
+                <li><strong>Homeowners:</strong> How can I maintain my building?</li>
+                <li><strong>Property Managers:</strong> How can I manage my properties effectively?</li>
+                <li><strong>Contractors:</strong> How can I provide better services?</li>
+            </ul>
+        </section>
+
+        <!-- Values -->
+        <section>
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Accessibility:</strong> Clear, simple language anyone can follow.</li>
+                <li><strong>Reliability:</strong> Advice based on proven practices.</li>
+                <li><strong>Empowerment:</strong> Helping homeowners save money and protect their investment.</li>
+                <li><strong>Community:</strong> Supporting families in creating safe, welcoming spaces.</li>
+            </ul>
+        </section>
+
+        <!-- Closing Note -->
+        <section>
+            <h2>Closing Note</h2>
+            <p>
+                We believe every homeowner deserves peace of mind. Whether you’re tackling a big renovation or just
+                fixing a small issue, Building Maintenance is here to guide you every step of the way.
+                Together, we can make your home safer, stronger, and more welcoming.
+            </p>
+        </section>
+
+        <!-- Images -->
+        <section class="image-container">
+            <img src="images/mat5.webp" alt="Team working on building maintenance" loading="lazy">
+            <img src="images/mat2.webp" alt="Maintenance tools and equipment" loading="lazy">
+        </section>
+
+        <!-- Contact Form -->
+        <section>
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="submit" value="Send Message" class="submit-btn">
+            </form>
+        </section>
     </main>
 
     <footer>

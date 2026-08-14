@@ -1,16 +1,19 @@
 /* ================================
-   Global Styles
+   Root Variables
    ================================ */
 :root {
     --primary-bg: #f0f0f0;
     /* light gray background */
-    --secondary-bg: #0066ff;
-    /* blue header/footer */
+    --secondary-bg: #09015d;
+    /* deep blue header/footer */
     --accent-color: #ffffff;
     /* white text/icons */
     --font-family: "Lato", sans-serif;
 }
 
+/* ================================
+   Global Reset & Base
+   ================================ */
 * {
     margin: 0;
     padding: 0;
@@ -72,15 +75,30 @@ nav a:focus {
 }
 
 /* ================================
-   Main Content
+   Main Content & Images
    ================================ */
+div{
+    text-align: center;
+}
+div p {
+    max-width: 800px;
+    /* limit width for readability */
+    margin: 0 auto;
+    /* center the block itself */
+    padding: 20px;
+    /* balanced padding */
+    text-align: justify;
+    /* neat text alignment for paragraphs */
+    line-height: 1.8;
+    /* improve readability */
+}
 main {
     padding: 20px;
 }
 
 main h2 {
     margin-bottom: 10px;
-    color: #222;
+    color: #09015d;
 }
 
 main p,
@@ -90,6 +108,27 @@ main ul {
 
 ul {
     list-style: disc inside;
+}
+
+/* Image grid container */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 equal columns */
+    gap: 20px;
+    /* space between images */
+    max-width: 1000px;
+    margin: 0 auto;
+    /* center the grid */
+}
+
+.image-container img {
+    width: 100%;
+    /* image fills its column */
+    height: auto;
+    /* keep proportions */
+    border-radius: 8px;
+    /* optional rounded corners */
 }
 
 /* ================================
@@ -135,7 +174,8 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #004bbd;
+    background-color: #06004a;
+    /* darker shade */
 }
 
 /* ================================
@@ -167,6 +207,11 @@ footer {
     #menu {
         display: block;
         /* show hamburger on mobile */
+    }
+
+    .image-container {
+        grid-template-columns: 1fr;
+        /* stack images in one column */
     }
 }
 
