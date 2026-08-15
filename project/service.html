@@ -25,9 +25,11 @@
     <main>
         <h2>What We Offer</h2>
         <ul id="serviceList"></ul>
+        
 
         <h2>Request a Service</h2>
         <form id="serviceForm">
+            <legend>Fill out the form below to request a service.</legend>
             <label for="service">Select a Service <span class="required">*</span></label>
             <select id="service" name="service" required>
                 <option value="" disabled selected>Choose a service...</option>
@@ -36,6 +38,9 @@
                 <option value="improvement">Home Improvement</option>
                 <option value="management">Property Management</option>
             </select>
+            <label for="date">schedule appointment <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+            <input type="time" id="time" name="time" required>
 
             <label for="details">Additional Details</label>
             <textarea id="details" name="details" rows="4"></textarea>
